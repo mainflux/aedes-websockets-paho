@@ -15,6 +15,10 @@
 		})
 
 		client.publish('World', 'hello World!')
+
+		function sendMessage(payloadString) {
+			client.publish('World', payloadString);
+		}		
 	</script>
 </body>
 </html>
