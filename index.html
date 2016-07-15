@@ -4,13 +4,13 @@
 	<title>Aedes+Websockets+Paho test</title>
 </head>
 <body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
 	<script type="text/javascript">
 
-		var location = { hostname: 'localhost', port: 9002 };
+		var loc = { hostname: 'localhost', port: 9001 };
 		
 		// Create a client instance
-		client = new Paho.MQTT.Client(location.hostname, Number(location.port), "clientId");
+		client = new Paho.MQTT.Client(loc.hostname, Number(loc.port), "clientId");
 
 		// set callback handlers
 		client.onConnectionLost = onConnectionLost;
